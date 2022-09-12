@@ -16,12 +16,11 @@ def draw_sqare(frame, color):
 
 
 def get_cascades():
-    cascades = [
+    return [
         (cv2.CascadeClassifier(cascade['path']), cascade['color'])
         for title, cascade in CASCADES.items()
         if cascade['draw']
     ]
-    return cascades
 
 
 if __name__ == "__main__":
